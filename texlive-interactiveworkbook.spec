@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/interactiveworkbook
+# catalog-date 2006-10-06 13:44:13 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-interactiveworkbook
 Version:	20061006
 Release:	1
@@ -154,6 +160,7 @@ freely use mathematical notation.
 %doc %{_texmfdistdir}/doc/latex/interactiveworkbook/samplefiles/popup.tex
 %doc %{_texmfdistdir}/doc/latex/interactiveworkbook/samplefiles/radio.pdf
 %doc %{_texmfdistdir}/doc/latex/interactiveworkbook/samplefiles/radio.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -164,3 +171,5 @@ freely use mathematical notation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
