@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package interactiveworkbook gives the user the ability to
@@ -27,20 +25,12 @@ question-and-answer Portable Document Format (PDF) tutorials
 meant to be used by Internet students and that, in particular,
 freely use mathematical notation.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -161,7 +151,6 @@ freely use mathematical notation.
 %doc %{_texmfdistdir}/doc/latex/interactiveworkbook/samplefiles/popup.tex
 %doc %{_texmfdistdir}/doc/latex/interactiveworkbook/samplefiles/radio.pdf
 %doc %{_texmfdistdir}/doc/latex/interactiveworkbook/samplefiles/radio.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -172,5 +161,3 @@ freely use mathematical notation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
