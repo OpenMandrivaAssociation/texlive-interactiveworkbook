@@ -161,3 +161,17 @@ freely use mathematical notation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061006-2
++ Revision: 752798
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20061006-1
++ Revision: 718724
+- texlive-interactiveworkbook
+- texlive-interactiveworkbook
+- texlive-interactiveworkbook
+- texlive-interactiveworkbook
+
