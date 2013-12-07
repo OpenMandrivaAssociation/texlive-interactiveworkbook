@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-interactiveworkbook
 Version:	20061006
-Release:	3
+Release:	4
 Summary:	latex-based interactive PDF on the web
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/interactiveworkbook
