@@ -1,5 +1,5 @@
 Name:		texlive-interactiveworkbook
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	latex-based interactive PDF on the web
 Group:		Publishing
