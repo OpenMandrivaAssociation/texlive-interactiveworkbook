@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	latex-based interactive PDF on the web
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/interactiveworkbook
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/interactiveworkbook
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/interactiveworkbook.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/interactiveworkbook.doc.r%{version}.tar.xz
